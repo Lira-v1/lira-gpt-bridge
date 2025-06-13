@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: lira-gpt-bridge
+    env: node
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "node server.js"
+    envVars:
+      - key: FILE_PATH
+        value: input.json
